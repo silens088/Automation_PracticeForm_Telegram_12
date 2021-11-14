@@ -1,6 +1,8 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
+import pages.components.CalendarComponent;
+import utils.RandomUtils;
 
 import java.io.File;
 
@@ -35,6 +37,8 @@ public class RegistrationPage { //представляем страницу в �
             selectSubmit = $("#submit"),
             resultsTable = $(".table-responsive");
 
+    public CalendarComponent calendar = new CalendarComponent();
+
     //actions methods
     public void openPage() {
         open("https://demoqa.com/automation-practice-form");
@@ -49,6 +53,7 @@ public class RegistrationPage { //представляем страницу в �
     public void typeLastName(String valueLastName) {
         lastNameInput.setValue(valueLastName);
     }
+
 
     public void typeEmail(String Email) {
         emailInput.setValue(Email);

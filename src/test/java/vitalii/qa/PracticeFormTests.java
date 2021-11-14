@@ -1,7 +1,11 @@
 package vitalii.qa;
 
+import com.github.javafaker.Faker;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import utils.RandomUtils;
+
+import static vitalii.qa.TestData.randomEmail;
 
 public class PracticeFormTests extends TestBase {
 
@@ -10,14 +14,18 @@ public class PracticeFormTests extends TestBase {
     void fillPracticeForm() {
 
         registrationPage.openPage();
-        registrationPage.typeFirstName("Piter");
+        //registrationPage.typeFirstName("Piter");
+        registrationPage.typeFirstName(randomName);
         registrationPage.typeLastName("Parker");
-        registrationPage.typeEmail("PParker@gmail.com");
+        //registrationPage.typeEmail("PParker@gmail.com");
+        registrationPage.typeEmail(randomEmail);
         registrationPage
                 .selectGender("Male")
                 .selectGender("Other");
-        registrationPage.typeNumber("2224449991");
-        registrationPage.selectDateOfBirth("November", "1991", "28");
+        //registrationPage.typeNumber("2224449991");
+        registrationPage.typeNumber(randomTelephone);
+        //registrationPage.selectDateOfBirth("November", "1991", "28"); //работает
+        registrationPage.calendar.setName("25", "1991", "November"); //запуск через компонент календарь
         registrationPage.typeSubjects("hindi");
         registrationPage
                 .selectHobbies("Reading")
@@ -27,11 +35,11 @@ public class PracticeFormTests extends TestBase {
         registrationPage.selectStateSity("Haryana", "Panipat");
         registrationPage.selectSubmit();
         registrationPage
-                .checkResultsValue("Student Name", "Piter Parker")
-                .checkResultsValue("Student Email", "PParker@gmail.com")
+                .checkResultsValue("Student Name", randomName + " Parker")
+                .checkResultsValue("Student Email", randomEmail)
                 .checkResultsValue("Gender", "Other")
-                .checkResultsValue("Mobile", "2224449991")
-                .checkResultsValue("Date of Birth", "28 November,1991")
+                .checkResultsValue("Mobile", randomTelephone)
+                .checkResultsValue("Date of Birth", "25 November,1991")
                 .checkResultsValue("Subjects", "Hindi")
                 .checkResultsValue("Hobbies", "Reading, Music")
                 .checkResultsValue("Picture", "cat.jpeg")
