@@ -28,7 +28,14 @@ public class PracticeFormTests extends TestBase {
         registrationPage.selectSubmit();
         registrationPage
                 .checkResultsValue("Student Name", "Piter Parker")
-                .checkResultsValue("Student Email", "PParker@gmail.com");
+                .checkResultsValue("Student Email", "PParker@gmail.com")
+                .checkResultsValue("Gender", "Other")
+                .checkResultsValue("Mobile", "2224449991")
+                .checkResultsValue("Date of Birth", "28 November,1991")
+                .checkResultsValue("Subjects", "Hindi")
+                .checkResultsValue("Hobbies", "Reading, Music")
+                .checkResultsValue("Picture", "cat.jpeg")
+                .checkResultsValue("Address", "Lenina str 1")
+                .checkResultsValue("State and City", "Haryana Panipat");
     }
 }
-
