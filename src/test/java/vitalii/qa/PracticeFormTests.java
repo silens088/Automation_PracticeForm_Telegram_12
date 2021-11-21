@@ -1,9 +1,7 @@
 package vitalii.qa;
 
-import com.github.javafaker.Faker;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import utils.RandomUtils;
 
 import static vitalii.qa.TestData.randomEmail;
 
