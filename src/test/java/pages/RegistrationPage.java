@@ -17,7 +17,7 @@ public class RegistrationPage { //представляем страницу в �
     private SelenideElement
             formTitle = $(".practice-form-wrapper"),
             mainHeader = $(".practice-form-wrapper"),
-            firstNameInput = $("[id=firstName]"),                           //явно видно что это id
+            firstNameInput = $("[id=firstName]"), //явно видно что это id
             lastNameInput = $("#lastName"),
             emailInput = $("#userEmail"),
             genderRadiobaton = $("[id=genterWrapper]"),
@@ -54,7 +54,6 @@ public class RegistrationPage { //представляем страницу в �
         lastNameInput.setValue(valueLastName);
     }
 
-
     public void typeEmail(String Email) {
         emailInput.setValue(Email);
     }
@@ -71,7 +70,7 @@ public class RegistrationPage { //представляем страницу в �
         dateOfBirthInputMouth.selectOption(month);
         dateOfBirthInputYear.selectOption(year);
 
-        SelenideElement dateOfBirthInputDay = $(".react-datepicker__day--0"+day+":not(.react-datepicker__day--outside-month)");
+        SelenideElement dateOfBirthInputDay = $(".react-datepicker__day--0" + day + ":not(.react-datepicker__day--outside-month)");
         dateOfBirthInputDay.click();
     }
 

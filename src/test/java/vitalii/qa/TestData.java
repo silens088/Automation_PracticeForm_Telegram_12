@@ -1,6 +1,5 @@
 package vitalii.qa;
 
-import utils.JavaFaker;
 import utils.RandomUtils;
 
 public class TestData {
