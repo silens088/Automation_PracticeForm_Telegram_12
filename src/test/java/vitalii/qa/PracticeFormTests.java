@@ -46,17 +46,4 @@ public class PracticeFormTests extends TestBase {
                 .checkResultsValue("Address", "Lenina str 1")
                 .checkResultsValue("State and City", "Haryana Panipat");
     }
-
-    @Test
-    @DisplayName("else one test")
-    void test2() {
-        assertFalse(false);
-    }
-
-    @Disabled
-    @Test
-    @DisplayName("else one test but disabled")
-    void test3() {
-        assertFalse(false);
-    }
 }
