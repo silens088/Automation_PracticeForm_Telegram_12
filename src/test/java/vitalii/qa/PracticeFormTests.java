@@ -10,7 +10,7 @@ import static vitalii.qa.TestData.randomEmail;
 public class PracticeFormTests extends TestBase {
 
     @Test
-    @DisplayName("test for PracticeForm")
+    @DisplayName("PracticeForm")
     void fillPracticeForm() {
 
         registrationPage.openPage();
