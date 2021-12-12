@@ -2,10 +2,14 @@ package vitalii.qa;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import com.github.javafaker.Faker;
+
+import helpers.Attach; //копипаст из хелпера
 import io.qameta.allure.selenide.AllureSelenide;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
+
+import com.github.javafaker.Faker;
 import pages.RegistrationPage;
 
 import java.util.Locale;
@@ -40,4 +44,11 @@ public class TestBase{
         Configuration.browserCapabilities = capabilities;
     }
 
+    @AfterEach
+    public void tearDown() {
+        Attach.screenshotAs("Last screenshot");
+        Attach.pageSource();
+        Attach.browserConsoleLogs();
+        Attach.addVideo();
+    }
 }
