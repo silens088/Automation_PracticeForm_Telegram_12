@@ -3,7 +3,7 @@ package vitalii.qa;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 
-import helpers.Attach; //копипаст из хелпера
+import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -15,7 +15,7 @@ import pages.RegistrationPage;
 import java.util.Locale;
 
 //Файл с общими вещами
-public class TestBase{
+public class TestBase {
 
     RegistrationPage registrationPage = new RegistrationPage();
 
@@ -23,9 +23,6 @@ public class TestBase{
     Faker faker = new Faker(new Locale("ru")); //выставили локализацию фейкера
     String randomName = faker.name().firstName();
     String randomTelephone = faker.number().digits(10);
-
-
-
 
     @BeforeAll
     static void beforeAll() {

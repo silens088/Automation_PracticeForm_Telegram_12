@@ -2,14 +2,14 @@ package simple;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-    @DisplayName("tests for example")
+@DisplayName("tests for example")
 
 public class PositiveTest {
 
     @Test
-
     void test0() {
         assertTrue(true);
     }
@@ -21,41 +21,6 @@ public class PositiveTest {
 
     @Test
     void test2() {
-        assertTrue(true);
-    }
-
-    @Test
-    void test3() {
-        assertTrue(true);
-    }
-
-    @Test
-    void test4() {
-        assertTrue(true);
-    }
-
-    @Test
-    void test5() {
-        assertTrue(true);
-    }
-
-    @Test
-    void test6() {
-        assertTrue(true);
-    }
-
-    @Test
-    void test7() {
-        assertTrue(true);
-    }
-
-    @Test
-    void test8() {
-        assertTrue(true);
-    }
-
-    @Test
-    void test9() {
         assertTrue(true);
     }
 }
