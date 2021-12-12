@@ -1,14 +1,16 @@
 package vitalii.qa;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static vitalii.qa.TestData.randomEmail;
 
 public class PracticeFormTests extends TestBase {
 
     @Test
-    @DisplayName("PracticeForm_1")
+    @DisplayName("test for PracticeForm")
     void fillPracticeForm() {
 
         registrationPage.openPage();
@@ -43,5 +45,18 @@ public class PracticeFormTests extends TestBase {
                 .checkResultsValue("Picture", "cat.jpeg")
                 .checkResultsValue("Address", "Lenina str 1")
                 .checkResultsValue("State and City", "Haryana Panipat");
+    }
+
+    @Test
+    @DisplayName("else one test")
+    void test2() {
+        assertFalse(false);
+    }
+
+    @Disabled
+    @Test
+    @DisplayName("else one test but disabled")
+    void test3() {
+        assertFalse(false);
     }
 }
