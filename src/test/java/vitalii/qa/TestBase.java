@@ -1,7 +1,9 @@
 package vitalii.qa;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.logevents.SelenideLogger;
 import com.github.javafaker.Faker;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.BeforeAll;
 import pages.RegistrationPage;
 
@@ -20,6 +22,7 @@ public class TestBase{
 
     @BeforeAll
     static void beforeAll() {
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide()); //добавили лисенер для аллюр
         Configuration.startMaximized = true;
         //Configuration.startMaximized = false;
         //Configuration.browserSize = "1366x768";
