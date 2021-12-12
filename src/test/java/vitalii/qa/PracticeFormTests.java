@@ -1,5 +1,6 @@
 package vitalii.qa;
 
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -7,8 +8,9 @@ import static vitalii.qa.TestData.randomEmail;
 
 public class PracticeFormTests extends TestBase {
 
+    @Owner("velichkovv")
     @Test
-    //@DisplayName("PracticeForm") //проблема?
+    @DisplayName("test for fill PracticeForm")
     void fillPracticeForm() {
 
         registrationPage.openPage();
