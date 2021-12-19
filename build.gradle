@@ -52,6 +52,7 @@ tasks.withType(Test) {
 
 //создали таску для запуска тестов с тегом properties из SystemPropertiesTest
 task properties_tests(type: Test) {
+    systemProperty("browserSize", System.getProperty("browserSize", "400x400")) //можно задавать на уровне груви проперти
     useJUnitPlatform {
         includeTags "properties"
     }
