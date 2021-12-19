@@ -43,7 +43,8 @@ public class SystemPropertiesTests {
     void someTest4() {
         String value = System.getProperty("browse","chrome");
         System.out.println(value);
-
+        //gradle clean properties_tests - но поч запуск через консоль не работает ???
+        //chrome
     }
 
 }
