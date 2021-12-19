@@ -48,3 +48,10 @@ tasks.withType(Test) {
         }
     }
 }
+
+//создали таску для запуска тестов с тегом properties из SystemPropertiesTest
+task properties_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags "properties"
+    }
+}
