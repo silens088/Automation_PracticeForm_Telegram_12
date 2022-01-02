@@ -32,7 +32,7 @@ public class TestBase {
         //Configuration.browserSize = "1366x768";
 
         //отключить для локального запуска тестов
-        //Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub/"; //для удаленного запуска тестов на селениде - ресурс школы
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub/"; //для удаленного запуска тестов на селениде - ресурс школы
 
         //конфигурация селеноида
         DesiredCapabilities capabilities = new DesiredCapabilities();
