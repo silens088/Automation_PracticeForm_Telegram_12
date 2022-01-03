@@ -1,4 +1,4 @@
-package vitalii.qa;
+package vitalii.qa.tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
@@ -26,13 +26,9 @@ public class TestBase {
 
     @BeforeAll
     static void beforeAll() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide()); //добавили лисенер для аллюр
-        Configuration.startMaximized = true;
-        //Configuration.startMaximized = false;
-        //Configuration.browserSize = "1366x768";
 
-        //отключить для локального запуска тестов
-        //Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub/"; //для удаленного запуска тестов на селениде - ресурс школы
+        //добавили лисенер для аллюр
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
         //конфигурация селеноида
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -40,6 +36,10 @@ public class TestBase {
         capabilities.setCapability("enableVideo", true);
 
         Configuration.browserCapabilities = capabilities;
+        Configuration.startMaximized = true;
+
+        //Конфигурация удаленного запуска на (селенид школы)
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub/";
     }
 
     @AfterEach

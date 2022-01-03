@@ -1,7 +1,7 @@
 //package utils;
 //
 //import com.github.javafaker.Faker;
-//import vitalii.qa.TestBase;
+//import vitalii.qa.tests.TestBase;
 //import java.util.Locale;
 //
 //public class JavaFaker {

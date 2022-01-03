@@ -1,4 +1,4 @@
-package vitalii.qa;
+package vitalii.qa.tests;
 
 import utils.RandomUtils;
 

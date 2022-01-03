@@ -1,10 +1,10 @@
-package vitalii.qa;
+package vitalii.qa.tests;
 
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static vitalii.qa.TestData.randomEmail;
+import static vitalii.qa.tests.TestData.randomEmail;
 
 public class PracticeFormTests extends TestBase {
 
