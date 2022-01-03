@@ -64,13 +64,13 @@ task properties_tests(type: Test) {
 //        includeTags "owner"
 //    }
 //}
-
-//запуск тестов для нескольких тегов
-task many_tags_tests(type: Test) {
-    useJUnitPlatform {
-        includeTags "properties"
-        includeTags "smoke"
-        //исключить
-        excludeTags "prod"
-    }
-}
+//
+////запуск тестов для нескольких тегов
+//task many_tags_tests(type: Test) {
+//    useJUnitPlatform {
+//        includeTags "properties"
+//        includeTags "smoke"
+//        //исключить
+//        excludeTags "prod"
+//    }
+//}
